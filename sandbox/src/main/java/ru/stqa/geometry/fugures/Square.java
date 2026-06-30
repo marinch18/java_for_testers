@@ -1,13 +1,13 @@
 package ru.stqa.geometry.fugures;
 
 
-public class Square {
+public record Square(double side) {
 
-    private double side;
-
-    public Square(double side) {
-        this.side = side;
-    }
+//    private double side;
+//
+//    public Square(double side) {
+//        this.side = side;
+//    }
 
     public static void printSquareArea(Square s) {
         String text = String.format("Площадь квадрата со стороной %f = %f", s.side, s.Area());
