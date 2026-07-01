@@ -2,6 +2,15 @@ package ru.stqa.geometry.fugures;
 
 public record Triangle(double a, double b, double c) {
 
+    public Triangle {
+        if (a < 0 || b < 0 || c < 0) {
+            throw new IllegalArgumentException("Сторона треугольника не может быть отрицательной");
+        }
+
+        if (a + b <= c || a + c <= b || b + c <= a) {
+            throw new IllegalArgumentException("Нарушено неравенство треугольника");
+        }
+    }
 
     public static void printTrianglePerimeter(Triangle t) {
         var text = String.format(
