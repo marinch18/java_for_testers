@@ -3,11 +3,11 @@ package ru.stqa.geometry.fugures;
 
 public record Square(double side) {
 
-//    private double side;
-//
-//    public Square(double side) {
-//        this.side = side;
-//    }
+    public Square {
+        if (side < 0) {
+            throw new IllegalArgumentException("Квадрат с отрицательной стороной не существует");
+        }
+    }
 
     public static void printSquareArea(Square s) {
         String text = String.format("Площадь квадрата со стороной %f = %f", s.side, s.Area());
