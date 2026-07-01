@@ -1,5 +1,3 @@
-package ru.stqa.geometry.fugures;
-
 import org.junit.jupiter.api.Test;
 
 public class MathTests {
