@@ -5,11 +5,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class ContactCreateTests {
+public class ContactCreationTests {
     private WebDriver driver;
 
     @BeforeEach
@@ -34,17 +33,11 @@ public class ContactCreateTests {
 
     @Test
     public void CanCreateNewContact() {
-        if (!isElementPresent(By.name("selected[]"))) {
-            driver.findElement(By.linkText("add new")).click();
-        }
         driver.findElement(By.linkText("add new")).click();
-        driver.findElement(By.name("firstname")).click();
         driver.findElement(By.name("firstname")).sendKeys("first_name");
         driver.findElement(By.name("middlename")).sendKeys("middle_name");
         driver.findElement(By.name("lastname")).sendKeys("last_name");
-        driver.findElement(By.name("address")).click();
         driver.findElement(By.name("address")).sendKeys("address");
-        driver.findElement(By.name("home")).click();
         driver.findElement(By.name("home")).sendKeys("123456");
         driver.findElement(By.name("mobile")).sendKeys("654321");
         driver.findElement(By.name("work")).sendKeys("777888");
@@ -58,13 +51,10 @@ public class ContactCreateTests {
     @Test
     public void CanCreateNewEmptyContact() {
         driver.findElement(By.linkText("add new")).click();
-        driver.findElement(By.name("firstname")).click();
         driver.findElement(By.name("firstname")).sendKeys("");
         driver.findElement(By.name("middlename")).sendKeys("");
         driver.findElement(By.name("lastname")).sendKeys("");
-        driver.findElement(By.name("address")).click();
         driver.findElement(By.name("address")).sendKeys("");
-        driver.findElement(By.name("home")).click();
         driver.findElement(By.name("home")).sendKeys("");
         driver.findElement(By.name("mobile")).sendKeys("");
         driver.findElement(By.name("work")).sendKeys("");
@@ -73,15 +63,6 @@ public class ContactCreateTests {
         driver.findElement(By.name("email3")).sendKeys("");
         driver.findElement(By.xpath("(//input[@name=\'submit\'])[2]")).click();
         driver.findElement(By.linkText("home page")).click();
-    }
-
-    private boolean isElementPresent(By locator) {
-        try {
-            driver.findElement(locator);
-            return true;
-        } catch (NoSuchElementException exception) {
-            return false;
-        }
     }
 }
 

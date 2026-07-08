@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="621363e1-cd55-41ba-99b1-b236e902351f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ContactRemoveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ContactRemoveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ContactCreateTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ContactCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ContactRemoveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ContactRemovalTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +117,8 @@
     "Gradle.ContactCreateTest.executor": "Run",
     "Gradle.ContactCreateTests.CanCreateNewContact.executor": "Run",
     "Gradle.ContactCreateTests.executor": "Run",
+    "Gradle.ContactCreationTests.CanCreateNewContact.executor": "Run",
+    "Gradle.ContactCreationTests.executor": "Run",
     "Gradle.ContactRemoveTest.CanContactRemove.executor": "Run",
     "Gradle.ContactRemoveTest.executor": "Run",
     "Gradle.GroupCreationTests (1).executor": "Run",
@@ -146,7 +149,7 @@
     "to.speed.mode.migration.done": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.ContactCreateTests">
+  <component name="RunManager" selected="Gradle.ContactRemovalTests">
     <configuration name="ContactCreateTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -174,7 +177,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactCreateTests.CanCreateNewContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -187,7 +190,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.ContactCreateTests.CanCreateNewContact&quot;" />
+            <option value="&quot;tests.ContactCreationTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -201,7 +204,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactRemoveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactCreationTests.CanCreateNewContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -214,7 +217,34 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.ContactRemoveTest&quot;" />
+            <option value="&quot;tests.ContactCreationTests.CanCreateNewContact&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ContactRemovalTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.ContactRemovalTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -257,10 +287,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ContactRemovalTests" />
+        <item itemvalue="Gradle.ContactCreationTests" />
+        <item itemvalue="Gradle.ContactCreationTests.CanCreateNewContact" />
         <item itemvalue="Gradle.ContactCreateTests" />
         <item itemvalue="Gradle.ContactRemoveTest.CanContactRemove" />
-        <item itemvalue="Gradle.ContactCreateTests.CanCreateNewContact" />
-        <item itemvalue="Gradle.ContactRemoveTest" />
       </list>
     </recent_temporary>
   </component>

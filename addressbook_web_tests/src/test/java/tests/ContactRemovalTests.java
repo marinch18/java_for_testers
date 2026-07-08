@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-public class ContactRemoveTest {
+public class ContactRemovalTests {
     private WebDriver driver;
 
 
@@ -38,15 +38,10 @@ public class ContactRemoveTest {
     public void CanContactRemove() {
         if (!isElementPresent(By.name("selected[]"))) {
             driver.findElement(By.linkText("add new")).click();
-        }
-        if (!isElementPresent(By.name("selected[]"))) {
-            driver.findElement(By.name("firstname")).click();
             driver.findElement(By.name("firstname")).sendKeys("first_name");
             driver.findElement(By.name("middlename")).sendKeys("middle_name");
             driver.findElement(By.name("lastname")).sendKeys("last_name");
-            driver.findElement(By.name("address")).click();
             driver.findElement(By.name("address")).sendKeys("address");
-            driver.findElement(By.name("home")).click();
             driver.findElement(By.name("home")).sendKeys("123456");
             driver.findElement(By.name("mobile")).sendKeys("654321");
             driver.findElement(By.name("work")).sendKeys("777888");
