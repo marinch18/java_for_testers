@@ -10,6 +10,38 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class ApplicationManager {
     public static WebDriver driver;
 
+    public static void createContact() {
+        driver.findElement(By.linkText("add new")).click();
+        driver.findElement(By.name("firstname")).sendKeys("first_name");
+        driver.findElement(By.name("middlename")).sendKeys("middle_name");
+        driver.findElement(By.name("lastname")).sendKeys("last_name");
+        driver.findElement(By.name("address")).sendKeys("address");
+        driver.findElement(By.name("home")).sendKeys("123456");
+        driver.findElement(By.name("mobile")).sendKeys("654321");
+        driver.findElement(By.name("work")).sendKeys("777888");
+        driver.findElement(By.name("email")).sendKeys("test1@mail.ru");
+        driver.findElement(By.name("email2")).sendKeys("test2@mail.ru");
+        driver.findElement(By.name("email3")).sendKeys("test3@mail.ru");
+        driver.findElement(By.xpath("(//input[@name=\'submit\'])[2]")).click();
+        driver.findElement(By.linkText("home page")).click();
+    }
+
+    public static void createEmptyContact() {
+        driver.findElement(By.linkText("add new")).click();
+        driver.findElement(By.name("firstname")).sendKeys("");
+        driver.findElement(By.name("middlename")).sendKeys("");
+        driver.findElement(By.name("lastname")).sendKeys("");
+        driver.findElement(By.name("address")).sendKeys("");
+        driver.findElement(By.name("home")).sendKeys("");
+        driver.findElement(By.name("mobile")).sendKeys("");
+        driver.findElement(By.name("work")).sendKeys("");
+        driver.findElement(By.name("email")).sendKeys("");
+        driver.findElement(By.name("email2")).sendKeys("");
+        driver.findElement(By.name("email3")).sendKeys("");
+        driver.findElement(By.xpath("(//input[@name=\'submit\'])[2]")).click();
+        driver.findElement(By.linkText("home page")).click();
+    }
+
     public void init() {
         if (driver == null) {
             driver = new FirefoxDriver();
