@@ -16,6 +16,7 @@ public class ContactCreateTests {
     public void setUp() {
         if (driver == null) {
             driver = new FirefoxDriver();
+            Runtime.getRuntime().addShutdownHook(new Thread(driver::quit));
             driver.get("http://localhost/addressbook/");
             driver.manage().window().setSize(new Dimension(1325, 956));
             driver.findElement(By.name("user")).click();
@@ -33,6 +34,9 @@ public class ContactCreateTests {
 
     @Test
     public void CanCreateNewContact() {
+        if (!isElementPresent(By.name("selected[]"))) {
+            driver.findElement(By.linkText("add new")).click();
+        }
         driver.findElement(By.linkText("add new")).click();
         driver.findElement(By.name("firstname")).click();
         driver.findElement(By.name("firstname")).sendKeys("first_name");
