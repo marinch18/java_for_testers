@@ -1,6 +1,7 @@
 package manager;
 
 import model.GroupData;
+import model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
@@ -20,34 +21,18 @@ public class ApplicationManager {
         }
     }
 
-    public void createContact() {
+    public void createContact(ContactData contact) {
         driver.findElement(By.linkText("add new")).click();
-        driver.findElement(By.name("firstname")).sendKeys("first_name");
-        driver.findElement(By.name("middlename")).sendKeys("middle_name");
-        driver.findElement(By.name("lastname")).sendKeys("last_name");
-        driver.findElement(By.name("address")).sendKeys("address");
-        driver.findElement(By.name("home")).sendKeys("123456");
-        driver.findElement(By.name("mobile")).sendKeys("654321");
-        driver.findElement(By.name("work")).sendKeys("777888");
-        driver.findElement(By.name("email")).sendKeys("test1@mail.ru");
-        driver.findElement(By.name("email2")).sendKeys("test2@mail.ru");
-        driver.findElement(By.name("email3")).sendKeys("test3@mail.ru");
-        driver.findElement(By.xpath("(//input[@name=\'submit\'])[2]")).click();
-        driver.findElement(By.linkText("home page")).click();
-    }
-
-    public void createEmptyContact() {
-        driver.findElement(By.linkText("add new")).click();
-        driver.findElement(By.name("firstname")).sendKeys("");
-        driver.findElement(By.name("middlename")).sendKeys("");
-        driver.findElement(By.name("lastname")).sendKeys("");
-        driver.findElement(By.name("address")).sendKeys("");
-        driver.findElement(By.name("home")).sendKeys("");
-        driver.findElement(By.name("mobile")).sendKeys("");
-        driver.findElement(By.name("work")).sendKeys("");
-        driver.findElement(By.name("email")).sendKeys("");
-        driver.findElement(By.name("email2")).sendKeys("");
-        driver.findElement(By.name("email3")).sendKeys("");
+        driver.findElement(By.name("firstname")).sendKeys(contact.firstName());
+        driver.findElement(By.name("middlename")).sendKeys(contact.middleName());
+        driver.findElement(By.name("lastname")).sendKeys(contact.lastName());
+        driver.findElement(By.name("address")).sendKeys(contact.address());
+        driver.findElement(By.name("home")).sendKeys(contact.home());
+        driver.findElement(By.name("mobile")).sendKeys(contact.mobile());
+        driver.findElement(By.name("work")).sendKeys(contact.work());
+        driver.findElement(By.name("email")).sendKeys(contact.email());
+        driver.findElement(By.name("email2")).sendKeys(contact.email2());
+        driver.findElement(By.name("email3")).sendKeys(contact.email3());
         driver.findElement(By.xpath("(//input[@name=\'submit\'])[2]")).click();
         driver.findElement(By.linkText("home page")).click();
     }

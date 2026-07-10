@@ -20,6 +20,6 @@ public class GroupCreationTests extends TestBase {
     @Test
     public void CanCreateGroupWithNameOnly() {
         app.openGroupsPage();
-        app.createGroup(new GroupData());
+        app.createGroup(new GroupData().withName("Name"));
     }
 }
