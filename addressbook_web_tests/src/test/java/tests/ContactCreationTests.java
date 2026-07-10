@@ -5,14 +5,17 @@ import org.junit.jupiter.api.Test;
 public class ContactCreationTests extends TestBase {
 
     @Test
-    public void CanCreateNewContact() {
+    public void canCreateNewContact() {
+        app.openHomePage();
         app.createContact();
     }
 
     @Test
-    public void CanCreateNewEmptyContact() {
+    public void canCreateNewEmptyContact() {
+        app.openHomePage();
         app.createEmptyContact();
     }
+
 
 }
 

@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="621363e1-cd55-41ba-99b1-b236e902351f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/model/contactData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/manager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ContactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ContactCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/manager/applicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/groupData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ContactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/contactCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ContactRemovalTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/contactRemovalTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/groupCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/GroupRemovalTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/groupRemovalTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/testBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,61 +47,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.659753966665777" />
-      <entry key="MS500" value="1.9648973986530218" />
-      <entry key="S2" value="2.753278955144474" />
-      <entry key="S5" value="3.410295303868846" />
-      <entry key="S10" value="3.877325262788006" />
-      <entry key="S30" value="4.6550000590695095" />
-      <entry key="S60" value="5.336409685869273" />
-      <entry key="M2" value="6.166534855513244" />
-      <entry key="M5" value="7.54047439580846" />
-      <entry key="M10" value="9.312217576335614" />
-      <entry key="M15" value="10.799519987623674" />
-      <entry key="M30" value="14.065428118433053" />
-      <entry key="H1" value="18.24424170837196" />
-      <entry key="H2" value="23.73326271040899" />
-      <entry key="H4" value="29.468534234144418" />
-      <entry key="D1" value="37.7445088442887" />
-      <entry key="W1" value="39.66246510179251" />
+      <entry key="MS100" value="1.6607857052680659E-37" />
+      <entry key="MS500" value="5.310524065471002E-8" />
+      <entry key="S2" value="0.02536800269103533" />
+      <entry key="S5" value="0.4893434564246087" />
+      <entry key="S10" value="1.7746755532331504" />
+      <entry key="S30" value="6.0819145454021895" />
+      <entry key="S60" value="9.409695308220785" />
+      <entry key="M2" value="12.109821579109324" />
+      <entry key="M5" value="14.880298348817767" />
+      <entry key="M10" value="19.40422103287242" />
+      <entry key="M15" value="24.231460363990706" />
+      <entry key="M30" value="35.41374338059562" />
+      <entry key="H1" value="47.617809418070685" />
+      <entry key="H2" value="59.230516711129944" />
+      <entry key="H4" value="69.2087863643839" />
+      <entry key="D1" value="82.46974816580938" />
+      <entry key="W1" value="85.47278345325255" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.1851177376862936E-236" />
-      <entry key="S2" value="1.043374875210736E-59" />
-      <entry key="S5" value="2.5549131985162028E-24" />
-      <entry key="S10" value="1.598424881964353E-12" />
-      <entry key="S30" value="1.2085287617388125E-4" />
-      <entry key="S60" value="0.013957588213337795" />
-      <entry key="M2" value="0.19824942614405147" />
-      <entry key="M5" value="1.1958615914940978" />
-      <entry key="M10" value="2.656944606817624" />
-      <entry key="M15" value="3.8518971815422627" />
-      <entry key="M30" value="6.367400282951228" />
-      <entry key="H1" value="9.243718166977844" />
-      <entry key="H2" value="12.35109138550672" />
-      <entry key="H4" value="15.19514202269496" />
-      <entry key="D1" value="18.99810323389308" />
-      <entry key="W1" value="19.85076041962872" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000000000000002" />
+      <entry key="S60" value="1.0000000111481395" />
+      <entry key="M2" value="1.0001060314923764" />
+      <entry key="M5" value="1.0320427266176857" />
+      <entry key="M10" value="1.3640062292783375" />
+      <entry key="M15" value="2.017320978540524" />
+      <entry key="M30" value="4.472641536258262" />
+      <entry key="H1" value="8.383082293466094" />
+      <entry key="H2" value="12.888460224867828" />
+      <entry key="H4" value="16.999881366741114" />
+      <entry key="D1" value="22.529287639167162" />
+      <entry key="W1" value="23.78048273476201" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7486761956618638" />
-      <entry key="MS500" value="1.487203183341773" />
-      <entry key="S2" value="2.5647807913000453" />
-      <entry key="S5" value="3.3185550701795923" />
-      <entry key="S10" value="3.827286848080327" />
-      <entry key="S30" value="4.637132117219203" />
-      <entry key="S60" value="5.341015303515265" />
-      <entry key="M2" value="6.359217649721685" />
-      <entry key="M5" value="8.732108916192214" />
-      <entry key="M10" value="11.964899219377346" />
-      <entry key="M15" value="14.647012255359899" />
-      <entry key="M30" value="20.428554844504855" />
-      <entry key="H1" value="27.484391661527923" />
-      <entry key="H2" value="36.08170083378765" />
-      <entry key="H4" value="44.66192944016398" />
-      <entry key="D1" value="56.74222474841632" />
-      <entry key="W1" value="59.51316707428241" />
+      <entry key="MS100" value="1.0559649124895847E-20" />
+      <entry key="MS500" value="1.0114160879622524E-4" />
+      <entry key="S2" value="0.12297263244951083" />
+      <entry key="S5" value="0.8614222237188698" />
+      <entry key="S10" value="2.3569315752910676" />
+      <entry key="S30" value="6.892485417413445" />
+      <entry key="S60" value="10.302173093175591" />
+      <entry key="M2" value="13.051494585950392" />
+      <entry key="M5" value="15.886504971220525" />
+      <entry key="M10" value="20.75198143409855" />
+      <entry key="M15" value="26.23528492725424" />
+      <entry key="M30" value="39.876077288646485" />
+      <entry key="H1" value="55.99335247283133" />
+      <entry key="H2" value="72.1138780247384" />
+      <entry key="H4" value="86.20550622373887" />
+      <entry key="D1" value="104.99836983690598" />
+      <entry key="W1" value="109.25316652087389" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -122,11 +128,14 @@
     "Gradle.ContactRemovalTests.executor": "Run",
     "Gradle.ContactRemoveTest.CanContactRemove.executor": "Run",
     "Gradle.ContactRemoveTest.executor": "Run",
+    "Gradle.Defectura (1).executor": "Run",
+    "Gradle.Defectura.executor": "Run",
     "Gradle.GroupCreationTests (1).executor": "Run",
     "Gradle.GroupCreationTests.executor": "Run",
     "Gradle.GroupRemovalTests.executor": "Run",
     "Gradle.Tests in 'tests'.executor": "Run",
     "Gradle.addressbook_web_tests [test].executor": "Run",
+    "Gradle.contactCreationTests.executor": "Run",
     "JUnit.GroupCreationTests.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Repository.Attach.Annotations": "false",
@@ -156,88 +165,7 @@
       <recent name="tests.TestBase" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ContactCreationTests">
-    <configuration name="ContactCreateTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.ContactCreateTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ContactCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.ContactCreationTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ContactCreationTests.CanCreateNewContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.ContactCreationTests.CanCreateNewContact&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.contactRemovalTests">
     <configuration name="ContactRemovalTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -265,7 +193,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactRemoveTest.CanContactRemove" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Defectura (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -278,7 +206,88 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.ContactRemoveTest.CanContactRemove&quot;" />
+            <option value="&quot;tests.Defectura&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Defectura" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;Defectura&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="contactCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.contactCreationTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="contactRemovalTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.contactRemovalTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -294,11 +303,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ContactCreationTests" />
-        <item itemvalue="Gradle.ContactCreationTests.CanCreateNewContact" />
+        <item itemvalue="Gradle.contactRemovalTests" />
+        <item itemvalue="Gradle.contactCreationTests" />
         <item itemvalue="Gradle.ContactRemovalTests" />
-        <item itemvalue="Gradle.ContactCreateTests" />
-        <item itemvalue="Gradle.ContactRemoveTest.CanContactRemove" />
+        <item itemvalue="Gradle.Defectura (1)" />
+        <item itemvalue="Gradle.Defectura" />
       </list>
     </recent_temporary>
   </component>

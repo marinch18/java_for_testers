@@ -10,7 +10,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class ApplicationManager {
     public static WebDriver driver;
 
-    public static void createContact() {
+    public boolean isContactPresent() {
+        return isElementPresent(By.name("selected[]"));
+    }
+
+    public void openHomePage() {
+        if (!isElementPresent(By.name("selected[]"))) {
+            driver.findElement(By.linkText("home")).click();
+        }
+    }
+
+    public void createContact() {
         driver.findElement(By.linkText("add new")).click();
         driver.findElement(By.name("firstname")).sendKeys("first_name");
         driver.findElement(By.name("middlename")).sendKeys("middle_name");
@@ -26,7 +36,7 @@ public class ApplicationManager {
         driver.findElement(By.linkText("home page")).click();
     }
 
-    public static void createEmptyContact() {
+    public void createEmptyContact() {
         driver.findElement(By.linkText("add new")).click();
         driver.findElement(By.name("firstname")).sendKeys("");
         driver.findElement(By.name("middlename")).sendKeys("");
@@ -39,6 +49,12 @@ public class ApplicationManager {
         driver.findElement(By.name("email2")).sendKeys("");
         driver.findElement(By.name("email3")).sendKeys("");
         driver.findElement(By.xpath("(//input[@name=\'submit\'])[2]")).click();
+        driver.findElement(By.linkText("home page")).click();
+    }
+
+    public void removeContact() {
+        driver.findElement(By.name("selected[]")).click();
+        driver.findElement(By.name("delete")).click();
         driver.findElement(By.linkText("home page")).click();
     }
 
@@ -63,15 +79,15 @@ public class ApplicationManager {
         }
     }
 
-    public void createGroup(GroupData Group) {
+    public void createGroup(GroupData group) {
         driver.findElement(By.linkText("groups")).click();
         driver.findElement(By.name("new")).click();
         driver.findElement(By.name("group_name")).click();
-        driver.findElement(By.name("group_name")).sendKeys(Group.name());
+        driver.findElement(By.name("group_name")).sendKeys(group.name());
         driver.findElement(By.name("group_header")).click();
-        driver.findElement(By.name("group_header")).sendKeys(Group.header());
+        driver.findElement(By.name("group_header")).sendKeys(group.header());
         driver.findElement(By.name("group_footer")).click();
-        driver.findElement(By.name("group_footer")).sendKeys(Group.footer());
+        driver.findElement(By.name("group_footer")).sendKeys(group.footer());
         driver.findElement(By.name("submit")).click();
         driver.findElement(By.linkText("group page")).click();
     }
