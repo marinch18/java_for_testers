@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class TestBase {
 
-    public static ApplicationManager app;
+    protected static ApplicationManager app;
 
     @BeforeEach
     public void setUp() {
