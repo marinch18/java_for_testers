@@ -25,14 +25,12 @@ public class ContactHelper {
         manager.driver.findElement(By.name("email2")).sendKeys(contact.email2());
         manager.driver.findElement(By.name("email3")).sendKeys(contact.email3());
         manager.driver.findElement(By.xpath("(//input[@name=\'submit\'])[2]")).click();
-        manager.driver.findElement(By.linkText("home page")).click();
     }
 
     public void removeContact() {
         openHomePage();
         manager.driver.findElement(By.name("selected[]")).click();
         manager.driver.findElement(By.name("delete")).click();
-        manager.driver.findElement(By.linkText("home page")).click();
     }
 
     public boolean isContactPresent() {
@@ -45,6 +43,7 @@ public class ContactHelper {
             manager.driver.findElement(By.linkText("home")).click();
         }
     }
+
 
 
 }
