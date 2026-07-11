@@ -45,5 +45,7 @@ public class ContactHelper {
             manager.driver.findElement(By.linkText("home")).click();
         }
     }
+
+
 }
 
