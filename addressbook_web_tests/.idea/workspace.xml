@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="621363e1-cd55-41ba-99b1-b236e902351f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ContactModificationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/manager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/manager/ContactHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,55 +108,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Build addressbook_web_tests.executor": "Run",
-    "Gradle.ContactCreateTest.executor": "Run",
-    "Gradle.ContactCreateTests.CanCreateNewContact.executor": "Run",
-    "Gradle.ContactCreateTests.executor": "Run",
-    "Gradle.ContactCreationTests.CanCreateNewContact.executor": "Run",
-    "Gradle.ContactCreationTests.canCreateNewContact.executor": "Run",
-    "Gradle.ContactCreationTests.executor": "Run",
-    "Gradle.ContactModificationTests.CanModifyContact.executor": "Run",
-    "Gradle.ContactRemovalTests.canContactRemove.executor": "Debug",
-    "Gradle.ContactRemovalTests.executor": "Run",
-    "Gradle.ContactRemoveTest.CanContactRemove.executor": "Run",
-    "Gradle.ContactRemoveTest.executor": "Run",
-    "Gradle.Defectura (1).executor": "Run",
-    "Gradle.Defectura.executor": "Run",
-    "Gradle.GroupCreationTests (1).executor": "Run",
-    "Gradle.GroupCreationTests.executor": "Run",
-    "Gradle.GroupModificationTests.executor": "Run",
-    "Gradle.GroupRemovalTests.executor": "Run",
-    "Gradle.Tests in 'tests'.executor": "Run",
-    "Gradle.addressbook_web_tests [test].executor": "Run",
-    "Gradle.contactCreationTests.executor": "Run",
-    "Gradle.contactRemovalTests.executor": "Run",
-    "JUnit.GroupCreationTests (1).executor": "Run",
-    "JUnit.GroupCreationTests.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/java_for_testers_hw/java_for_testers/addressbook_web_tests",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build addressbook_web_tests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ContactCreateTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ContactCreateTests.CanCreateNewContact.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ContactCreateTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ContactCreationTests.CanCreateNewContact.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ContactCreationTests.canCreateNewContact.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ContactCreationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ContactModificationTests.CanModifyContact.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ContactRemovalTests.canContactRemove.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.ContactRemovalTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ContactRemoveTest.CanContactRemove.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ContactRemoveTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Defectura (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Defectura.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GroupCreationTests (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GroupCreationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GroupModificationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GroupRemovalTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'tests'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.addressbook_web_tests [test].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.contactCreationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.contactRemovalTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GroupCreationTests (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GroupCreationTests.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/java_for_testers_hw/java_for_testers/addressbook_web_tests&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="manager.ApplicationManager" />
