@@ -82,5 +82,6 @@ public class ContactHelper extends HelperBase {
     private void newContactPage() {
         click(By.linkText("add new"));
     }
+
 }
 

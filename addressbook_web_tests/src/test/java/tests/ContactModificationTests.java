@@ -12,4 +12,5 @@ public class ContactModificationTests extends TestBase {
         }
         app.contact().modifyContact(new ContactData().withFirstName("modified first name"));
     }
+
 }

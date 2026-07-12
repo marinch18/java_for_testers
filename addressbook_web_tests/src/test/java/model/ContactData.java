@@ -65,4 +65,5 @@ public record ContactData(String firstName,
         return new ContactData(this.firstName, this.middleName, this.lastName, this.address, this.home, this.mobile,
                 this.work, this.email, this.email2, email3);
     }
+
 }
