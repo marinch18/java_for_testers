@@ -3,9 +3,9 @@ package manager;
 import model.GroupData;
 import org.openqa.selenium.By;
 
-public class GroupHelper extends HelperBase{
+public class GroupHelper extends HelperBase {
 
-    public GroupHelper(ApplicationManager manager){
+    public GroupHelper(ApplicationManager manager) {
         super(manager);
     }
 
@@ -13,11 +13,6 @@ public class GroupHelper extends HelperBase{
         if (!manager.isElementPresent(By.name("new"))) {
             click(By.linkText("groups"));
         }
-    }
-
-    public boolean isGroupPresent() {
-        openGroupsPage();
-        return manager.isElementPresent(By.name("selected[]"));
     }
 
     public void createGroup(GroupData group) {
@@ -77,5 +72,8 @@ public class GroupHelper extends HelperBase{
     private void selectGroup() {
         click(By.name("selected[]"));
     }
+
+    public int getCount() {
+        return manager.driver.findElements(By.name("selected[]")).size();}
 
 }
