@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="621363e1-cd55-41ba-99b1-b236e902351f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/manager/HelperBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/GroupModificationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/manager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/manager/ContactHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/manager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/manager/GroupHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/manager/LoginHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/manager/LoginHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,61 +43,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000020988056362" />
-      <entry key="S5" value="1.0053553626914045" />
-      <entry key="S10" value="1.0731803436135992" />
-      <entry key="S30" value="1.4182778459602332" />
-      <entry key="S60" value="1.6471285914883325" />
-      <entry key="M2" value="1.8436399386380755" />
-      <entry key="M5" value="2.683990469521353" />
-      <entry key="M10" value="4.98134928063353" />
-      <entry key="M15" value="8.359153902809474" />
-      <entry key="M30" value="23.741358442471412" />
-      <entry key="H1" value="56.55244353761143" />
-      <entry key="H2" value="98.39932657051179" />
-      <entry key="H4" value="135.7716339769282" />
-      <entry key="D1" value="184.28560830566482" />
-      <entry key="W1" value="195.10491324466685" />
+      <entry key="MS100" value="4.2933102700516415E-110" />
+      <entry key="MS500" value="1.3383153372763068E-22" />
+      <entry key="S2" value="3.4012582935748065E-6" />
+      <entry key="S5" value="0.006496147023930379" />
+      <entry key="S10" value="0.08059867879767249" />
+      <entry key="S30" value="0.431962155171886" />
+      <entry key="S60" value="0.6601622892334565" />
+      <entry key="M2" value="0.9371792968916307" />
+      <entry key="M5" value="2.8939591893414915" />
+      <entry key="M10" value="8.271459687945176" />
+      <entry key="M15" value="13.982847475143899" />
+      <entry key="M30" value="31.172921611983114" />
+      <entry key="H1" value="64.94070789246683" />
+      <entry key="H2" value="111.88594414140765" />
+      <entry key="H4" value="156.7582479746378" />
+      <entry key="D1" value="217.67458975060063" />
+      <entry key="W1" value="231.5587057325556" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.087216816445485E-110" />
-      <entry key="S5" value="1.770975891358535E-44" />
-      <entry key="S10" value="1.9508052655453138E-22" />
-      <entry key="S30" value="1.367626028808785E-7" />
-      <entry key="S60" value="8.018887187582876E-4" />
-      <entry key="M2" value="0.06545805868128828" />
-      <entry key="M5" value="1.1173845459410874" />
-      <entry key="M10" value="4.085703728192172" />
-      <entry key="M15" value="7.788846728129508" />
-      <entry key="M30" value="19.778409126124856" />
-      <entry key="H1" value="37.801330163203396" />
-      <entry key="H2" value="56.749481249286056" />
-      <entry key="H4" value="72.37015514257612" />
-      <entry key="D1" value="91.93849817509373" />
-      <entry key="W1" value="96.2467592984308" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000000011217695" />
+      <entry key="S5" value="1.000720912420387" />
+      <entry key="S10" value="1.0376045511329646" />
+      <entry key="S30" value="1.8249402959372745" />
+      <entry key="S60" value="3.2063899941030023" />
+      <entry key="M2" value="5.21527717840329" />
+      <entry key="M5" value="8.502852056066736" />
+      <entry key="M10" value="12.201289950197456" />
+      <entry key="M15" value="15.699000857297266" />
+      <entry key="M30" value="26.75388483978393" />
+      <entry key="H1" value="46.03616397526584" />
+      <entry key="H2" value="69.01521198181574" />
+      <entry key="H4" value="89.15302875798295" />
+      <entry key="D1" value="115.17685407805193" />
+      <entry key="W1" value="120.98268545231652" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8766057213160351" />
-      <entry key="MS500" value="0.974004268543241" />
-      <entry key="S2" value="0.9934380433576036" />
-      <entry key="S5" value="1.0018028166575452" />
-      <entry key="S10" value="1.0652669940345187" />
-      <entry key="S30" value="1.4048719298127605" />
-      <entry key="S60" value="1.6375791338742713" />
-      <entry key="M2" value="1.901481757536205" />
-      <entry key="M5" value="3.790022790884473" />
-      <entry key="M10" value="9.050904588664306" />
-      <entry key="M15" value="16.128728470273728" />
-      <entry key="M30" value="43.49530895011096" />
-      <entry key="H1" value="94.32937809926645" />
-      <entry key="H2" value="155.1299784056155" />
-      <entry key="H4" value="208.1296367139066" />
-      <entry key="D1" value="276.22151547940024" />
-      <entry key="W1" value="291.3512847640567" />
+      <entry key="MS100" value="0.00567958014578246" />
+      <entry key="MS500" value="0.35551935264681866" />
+      <entry key="S2" value="0.7721779283217436" />
+      <entry key="S5" value="0.9083333848125552" />
+      <entry key="S10" value="1.0609071985288707" />
+      <entry key="S30" value="2.2072248469457882" />
+      <entry key="S60" value="3.818916051438779" />
+      <entry key="M2" value="6.111958537879312" />
+      <entry key="M5" value="11.364886185078772" />
+      <entry key="M10" value="20.442829216865707" />
+      <entry key="M15" value="29.651938016985923" />
+      <entry key="M30" value="57.89642073340494" />
+      <entry key="H1" value="110.94825920214396" />
+      <entry key="H2" value="180.87875986137936" />
+      <entry key="H4" value="245.8965361959632" />
+      <entry key="D1" value="332.8482307521762" />
+      <entry key="W1" value="352.5409082468613" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -126,6 +129,7 @@
     "Gradle.Defectura.executor": "Run",
     "Gradle.GroupCreationTests (1).executor": "Run",
     "Gradle.GroupCreationTests.executor": "Run",
+    "Gradle.GroupModificationTests.executor": "Run",
     "Gradle.GroupRemovalTests.executor": "Run",
     "Gradle.Tests in 'tests'.executor": "Run",
     "Gradle.addressbook_web_tests [test].executor": "Run",
@@ -243,7 +247,7 @@
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="GroupCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GroupModificationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -256,7 +260,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.GroupCreationTests&quot;" />
+            <option value="&quot;tests.GroupModificationTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -298,19 +302,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.GroupModificationTests" />
       <item itemvalue="Gradle.ContactCreationTests" />
       <item itemvalue="Gradle.ContactRemovalTests" />
       <item itemvalue="Gradle.Tests in 'tests'" />
       <item itemvalue="Gradle.GroupCreationTests (1)" />
-      <item itemvalue="Gradle.GroupCreationTests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'tests'" />
+        <item itemvalue="Gradle.GroupModificationTests" />
         <item itemvalue="Gradle.ContactRemovalTests" />
         <item itemvalue="Gradle.ContactCreationTests" />
         <item itemvalue="Gradle.GroupCreationTests (1)" />
-        <item itemvalue="Gradle.GroupCreationTests" />
       </list>
     </recent_temporary>
   </component>
