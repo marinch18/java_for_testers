@@ -3,35 +3,47 @@ package manager;
 import model.ContactData;
 import org.openqa.selenium.By;
 
-public class ContactHelper {
-
-    private final ApplicationManager manager;
+public class ContactHelper extends HelperBase {
 
     public ContactHelper(ApplicationManager manager) {
-        this.manager = manager;
+        super(manager);
     }
 
     public void createContact(ContactData contact) {
         openHomePage();
-        manager.driver.findElement(By.linkText("add new")).click();
-        manager.driver.findElement(By.name("firstname")).sendKeys(contact.firstName());
-        manager.driver.findElement(By.name("middlename")).sendKeys(contact.middleName());
-        manager.driver.findElement(By.name("lastname")).sendKeys(contact.lastName());
-        manager.driver.findElement(By.name("address")).sendKeys(contact.address());
-        manager.driver.findElement(By.name("home")).sendKeys(contact.home());
-        manager.driver.findElement(By.name("mobile")).sendKeys(contact.mobile());
-        manager.driver.findElement(By.name("work")).sendKeys(contact.work());
-        manager.driver.findElement(By.name("email")).sendKeys(contact.email());
-        manager.driver.findElement(By.name("email2")).sendKeys(contact.email2());
-        manager.driver.findElement(By.name("email3")).sendKeys(contact.email3());
-        manager.driver.findElement(By.xpath("(//input[@name=\'submit\'])[2]")).click();
+        newContactPage();
+        fillContactForm(contact);
+        click(By.xpath("(//input[@name=\'submit\'])[2]"));
+        returnToHomePage();
+    }
+
+    public void modifyContact(ContactData modifiedContact) {
+        openHomePage();
+        initContactModification();
+        fillContactForm(modifiedContact);
+        submitContactModification();
+        returnToHomePage();
     }
 
     public void removeContact() {
         openHomePage();
-        manager.driver.findElement(By.name("selected[]")).click();
-        manager.driver.findElement(By.name("delete")).click();
+        selectContact();
+        removeSelectedContact();
     }
+
+    private void fillContactForm(ContactData contact) {
+        type(By.name("firstname"), contact.firstName());
+        type(By.name("middlename"), contact.middleName());
+        type(By.name("lastname"), contact.lastName());
+        type(By.name("address"), contact.address());
+        type(By.name("home"), contact.home());
+        type(By.name("mobile"), contact.mobile());
+        type(By.name("work"), contact.work());
+        type(By.name("email"), contact.email());
+        type(By.name("email2"), contact.email2());
+        type(By.name("email3"), contact.email3());
+    }
+
 
     public boolean isContactPresent() {
         openHomePage();
@@ -40,11 +52,35 @@ public class ContactHelper {
 
     public void openHomePage() {
         if (!manager.isElementPresent(By.name("selected[]"))) {
-            manager.driver.findElement(By.linkText("home")).click();
+            returnToHomePage();
         }
     }
 
 
+    private void returnToHomePage() {
+        click(By.linkText("home"));
+    }
 
+    private void submitContactModification() {
+        click(By.name("update"));
+    }
+
+    private void selectContact() {
+        click(By.name("selected[]"));
+    }
+
+    private void removeSelectedContact() {
+        click(By.name("delete"));
+        //manager.driver.switchTo().alert().accept();
+        // В текущей версии AddressBook alert отсутствует.
+    }
+
+    private void initContactModification() {
+        click(By.xpath("//img[@title='Edit']"));
+    }
+
+    private void newContactPage() {
+        click(By.linkText("add new"));
+    }
 }
 
