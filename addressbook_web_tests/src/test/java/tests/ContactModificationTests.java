@@ -7,10 +7,10 @@ public class ContactModificationTests extends TestBase {
 
     @Test
     void сanModifyContact() {
-        if (!app.contact().isContactPresent()) {
-            app.contact().createContact(new ContactData().withFirstName("Ivan").withAddress("Moskow"));
+        if (app.contacts().getCount() == 0) {
+            app.contacts().createContact(new ContactData().withFirstName("Ivan").withAddress("Moskow"));
         }
-        app.contact().modifyContact(new ContactData().withFirstName("modified first name"));
+        app.contacts().modifyContact(new ContactData().withFirstName("modified first name"));
     }
 
 }

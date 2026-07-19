@@ -28,7 +28,13 @@ public class ContactHelper extends HelperBase {
     public void removeContact() {
         openHomePage();
         selectContact();
-        removeSelectedContact();
+        removeSelectedContacts();
+    }
+
+    public void removeAllContacts() {
+        openHomePage();
+        selectAllContacts();
+        removeSelectedContacts();
     }
 
     private void fillContactForm(ContactData contact) {
@@ -45,17 +51,16 @@ public class ContactHelper extends HelperBase {
     }
 
 
-    public boolean isContactPresent() {
-        openHomePage();
-        return manager.isElementPresent(By.name("selected[]"));
-    }
-
     public void openHomePage() {
         if (!manager.isElementPresent(By.name("selected[]"))) {
             returnToHomePage();
         }
     }
 
+    public int getCount() {
+        openHomePage();
+        return manager.driver.findElements(By.name("selected[]")).size();
+    }
 
     private void returnToHomePage() {
         click(By.linkText("home"));
@@ -69,7 +74,12 @@ public class ContactHelper extends HelperBase {
         click(By.name("selected[]"));
     }
 
-    private void removeSelectedContact() {
+    private void selectAllContacts() {
+        click(By.id("MassCB"));
+    }
+
+
+    private void removeSelectedContacts() {
         click(By.name("delete"));
         //manager.driver.switchTo().alert().accept();
         // В текущей версии AddressBook alert отсутствует.

@@ -1,28 +1,54 @@
 package tests;
 
 import model.ContactData;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactCreationTests extends TestBase {
 
-    @Test
-    public void canCreateNewContact() {
-        app.contact().createContact(new ContactData("Ivan", "Ivanovich", "Ivanov",
-                "Moskow street", "5", "+79998887766", "+74732333444", "email1@test.ru",
-                "email2@test.ru", "email3@test.ru"));
+    public static List<ContactData> contactProvider() {
+        var result = new ArrayList<ContactData>();
+        for (var firstName : List.of("", "firstName")) {
+            for (var middleName : List.of("", "middleName")) {
+                for (var lastName : List.of("", "lastName")) {
+                    for (var address : List.of("", "address")) {
+                        for (var home : List.of("", "home")) {
+                            for (var mobile : List.of("", "mobile")) {
+                                for (var work : List.of("", "work")) {
+                                    for (var email : List.of("", "email")) {
+                                        for (var email2 : List.of("", "email2")) {
+                                            for (var email3 : List.of("", "email3")) {
+                                                result.add(new ContactData(firstName, middleName, lastName,
+                                                        address, home, mobile, work, email, email2, email3));
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < 5; i++) {
+            result.add(new ContactData(randomString(i * 10), randomString(i * 10), randomString(i * 10),
+                    randomString(i * 10), randomString(i * 10), randomString(i * 10), randomString(i * 10),
+                    randomString(i * 10), randomString(i * 10), randomString(i * 10)));
+        }
+        return result;
     }
 
-    @Test
-    public void canCreateNewEmptyContact() {
-        app.contact().createContact(new ContactData());
+    @ParameterizedTest
+    @MethodSource("contactProvider")
+    public void canCreateMultipleContacts(ContactData contact) {
+        int contactCount = app.contacts().getCount();
+        app.contacts().createContact(contact);
+        int newContactCount = app.contacts().getCount();
+        Assertions.assertEquals(contactCount + 1, newContactCount);
     }
-
-    @Test
-    public void canCreateNewContactOnlyWithFirstName() {
-        app.contact().createContact(new ContactData().withFirstName("Ivan").withAddress("Moskow"));
-    }
-
-
-
 }
 
