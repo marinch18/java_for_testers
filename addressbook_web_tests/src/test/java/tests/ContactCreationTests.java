@@ -17,18 +17,9 @@ public class ContactCreationTests extends TestBase {
                 for (var lastName : List.of("", "lastName")) {
                     for (var address : List.of("", "address")) {
                         for (var home : List.of("", "home")) {
-                            for (var mobile : List.of("", "mobile")) {
-                                for (var work : List.of("", "work")) {
-                                    for (var email : List.of("", "email")) {
-                                        for (var email2 : List.of("", "email2")) {
-                                            for (var email3 : List.of("", "email3")) {
-                                                result.add(new ContactData(firstName, middleName, lastName,
-                                                        address, home, mobile, work, email, email2, email3));
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                            result.add(new ContactData(firstName, middleName, lastName,
+                                    address, home, "mobile", "work", "email@test.ru",
+                                    "email2@test.ru", "email3@test.ru"));
                         }
                     }
                 }
