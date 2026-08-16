@@ -2,6 +2,8 @@ package manager;
 
 import model.ContactData;
 import org.openqa.selenium.By;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactHelper extends HelperBase {
 
@@ -25,9 +27,9 @@ public class ContactHelper extends HelperBase {
         returnToHomePage();
     }
 
-    public void removeContact() {
+    public void removeContact(ContactData contact) {
         openHomePage();
-        selectContact();
+        selectContact(contact);
         removeSelectedContacts();
     }
 
@@ -70,8 +72,11 @@ public class ContactHelper extends HelperBase {
         click(By.name("update"));
     }
 
-    private void selectContact() {
-        click(By.name("selected[]"));
+    private void selectContact(ContactData contact) {
+        click(By.xpath(String.format(
+                "//tr[@name='entry'][td[2][normalize-space()='%s']][td[3][normalize-space()='%s']]//input[@name='selected[]']",
+                contact.lastName(),
+                contact.firstName())));
     }
 
     private void selectAllContacts() {
@@ -93,5 +98,24 @@ public class ContactHelper extends HelperBase {
         click(By.linkText("add new"));
     }
 
+    public List<ContactData> getList() {
+        openHomePage();
+
+        var contacts = new ArrayList<ContactData>();
+        var rows = manager.driver.findElements(By.cssSelector("tr[name='entry']"));
+
+        for (var row : rows) {
+            var cells = row.findElements(By.tagName("td"));
+
+            var lastName = cells.get(1).getText();
+            var firstName = cells.get(2).getText();
+
+            contacts.add(new ContactData()
+                    .withFirstName(firstName)
+                    .withLastName(lastName));
+        }
+
+        return contacts;
+    }
 }
 
