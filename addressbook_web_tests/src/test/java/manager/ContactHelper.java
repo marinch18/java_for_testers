@@ -21,8 +21,7 @@ public class ContactHelper extends HelperBase {
 
     public void modifyContact(ContactData contact, ContactData modifiedContact) {
         openHomePage();
-        selectContact(contact);
-        initContactModification();
+        initContactModification(contact);
         fillContactForm(modifiedContact);
         submitContactModification();
         returnToHomePage();
@@ -91,8 +90,11 @@ public class ContactHelper extends HelperBase {
         // В текущей версии AddressBook alert отсутствует.
     }
 
-    private void initContactModification() {
-        click(By.xpath("//img[@title='Edit']"));
+    private void initContactModification(ContactData contact) {
+        click(By.xpath(String.format(
+                "//tr[@name='entry'][td[2][normalize-space()='%s']][td[3][normalize-space()='%s']]//img[@title='Edit']",
+                contact.lastName(),
+                contact.firstName())));
     }
 
     private void newContactPage() {
