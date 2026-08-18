@@ -15,7 +15,7 @@ public class ContactHelper extends HelperBase {
         openHomePage();
         newContactPage();
         fillContactForm(contact);
-        click(By.xpath("(//input[@name=\'submit\'])[2]"));
+        click(By.xpath("(//input[@name='submit'])[2]"));
         returnToHomePage();
     }
 
@@ -43,6 +43,7 @@ public class ContactHelper extends HelperBase {
         type(By.name("firstname"), contact.firstName());
         type(By.name("middlename"), contact.middleName());
         type(By.name("lastname"), contact.lastName());
+        attach(By.name("photo"), contact.photo());
         type(By.name("address"), contact.address());
         type(By.name("home"), contact.home());
         type(By.name("mobile"), contact.mobile());
