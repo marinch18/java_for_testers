@@ -74,9 +74,8 @@ public class ContactHelper extends HelperBase {
 
     private void selectContact(ContactData contact) {
         click(By.xpath(String.format(
-                "//tr[@name='entry'][td[2][normalize-space()='%s']][td[3][normalize-space()='%s']]//input[@name='selected[]']",
-                contact.lastName(),
-                contact.firstName())));
+                "//input[@name='selected[]' and @value='%s']",
+                contact.id())));
     }
 
     private void selectAllContacts() {
@@ -92,9 +91,7 @@ public class ContactHelper extends HelperBase {
 
     private void initContactModification(ContactData contact) {
         click(By.xpath(String.format(
-                "//tr[@name='entry'][td[2][normalize-space()='%s']][td[3][normalize-space()='%s']]//img[@title='Edit']",
-                contact.lastName(),
-                contact.firstName())));
+                "//input[@name='selected[]' and @value='%s']/ancestor::tr//img[@title='Edit']", contact.id())));
     }
 
     private void newContactPage() {
@@ -112,8 +109,10 @@ public class ContactHelper extends HelperBase {
 
             var lastName = cells.get(1).getText();
             var firstName = cells.get(2).getText();
+            var id = cells.get(0).findElement(By.name("selected[]")).getAttribute("value");
 
             contacts.add(new ContactData()
+                    .withId(id)
                     .withFirstName(firstName)
                     .withLastName(lastName));
         }

@@ -35,9 +35,17 @@ public class ContactCreationTests extends TestBase {
             }
         }
         for (int i = 0; i < 5; i++) {
-            result.add(new ContactData(randomString(i * 10), randomString(i * 10), randomString(i * 10),
-                    randomString(i * 10), randomString(i * 10), randomString(i * 10), randomString(i * 10),
-                    randomString(i * 10), randomString(i * 10), randomString(i * 10)));
+            result.add(new ContactData()
+                    .withFirstName(randomString(i * 10))
+                    .withMiddleName(randomString(i * 10))
+                    .withLastName(randomString(i * 10))
+                    .withAddress(randomString(i * 10))
+                    .withHome(randomString(i * 10))
+                    .withMobile(randomString(i * 10))
+                    .withWork(randomString(i * 10))
+                    .withEmail(randomString(i * 10))
+                    .withEmail2(randomString(i * 10))
+                    .withEmail3(randomString(i * 10)));
         }
         return result;
     }
@@ -48,18 +56,31 @@ public class ContactCreationTests extends TestBase {
         var oldContacts = app.contacts().getList();
         app.contacts().createContact(contact);
         var newContacts = app.contacts().getList();
-        var expectedList = new ArrayList<>(oldContacts);
+        var expectedList = new ArrayList<ContactData>();
+        for (var oldContact : oldContacts) {
+            expectedList.add(new ContactData()
+                    .withFirstName(oldContact.firstName())
+                    .withLastName(oldContact.lastName()));
+        }
         expectedList.add(new ContactData()
                 .withFirstName(contact.firstName())
                 .withLastName(contact.lastName()));
+
+        var actualList = new ArrayList<ContactData>();
+
+        for (var newContact : newContacts) {
+            actualList.add(new ContactData()
+                    .withFirstName(newContact.firstName())
+                    .withLastName(newContact.lastName()));
+        }
         Comparator<ContactData> compareByName = Comparator
                 .comparing(ContactData::lastName)
                 .thenComparing(ContactData::firstName);
 
-        newContacts.sort(compareByName);
+        actualList.sort(compareByName);
         expectedList.sort(compareByName);
 
-        Assertions.assertEquals(newContacts, expectedList);
+        Assertions.assertEquals(actualList, expectedList);
     }
 }
 

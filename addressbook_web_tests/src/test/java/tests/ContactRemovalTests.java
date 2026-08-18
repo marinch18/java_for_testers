@@ -19,9 +19,22 @@ public class ContactRemovalTests extends TestBase {
         var index = rnd.nextInt(oldContacts.size());
         app.contacts().removeContact(oldContacts.get(index));
         var newContacts = app.contacts().getList();
-        var expectedList = new ArrayList<>(oldContacts);
-        expectedList.remove(index);
-        Assertions.assertEquals(newContacts, expectedList);
+        var expectedList = new ArrayList<ContactData>();
+        for (int i = 0; i < oldContacts.size(); i++) {
+            if (i != index) {
+                expectedList.add(new ContactData()
+                        .withFirstName(oldContacts.get(i).firstName())
+                        .withLastName(oldContacts.get(i).lastName()));
+            }
+        }
+        var actualList = new ArrayList<ContactData>();
+
+        for (var contact : newContacts) {
+            actualList.add(new ContactData()
+                    .withFirstName(contact.firstName())
+                    .withLastName(contact.lastName()));
+        }
+        Assertions.assertEquals(actualList, expectedList);
     }
 
     @Test

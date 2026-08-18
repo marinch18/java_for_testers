@@ -25,12 +25,28 @@ public class ContactModificationTests extends TestBase {
                 .withLastName("modified last name");
         app.contacts().modifyContact(oldContacts.get(index), testData);
         var newContacts = app.contacts().getList();
-        var expectedList = new ArrayList<>(oldContacts);
-        expectedList.set(index, new ContactData().withFirstName(testData.firstName()).withLastName(testData.lastName()));
+        var expectedList = new ArrayList<ContactData>();
+        for (int i = 0; i < oldContacts.size(); i++) {
+            if (i == index) {
+                expectedList.add(new ContactData()
+                        .withFirstName(testData.firstName())
+                        .withLastName(testData.lastName()));
+            } else {
+                expectedList.add(new ContactData()
+                        .withFirstName(oldContacts.get(i).firstName())
+                        .withLastName(oldContacts.get(i).lastName()));
+            }
+        }
+        var actualList = new ArrayList<ContactData>();
+        for (var contact : newContacts) {
+            actualList.add(new ContactData()
+                    .withFirstName(contact.firstName())
+                    .withLastName(contact.lastName()));
+        }
         Comparator<ContactData> compareByName = Comparator.comparing(ContactData::lastName).thenComparing(ContactData::firstName);
-        newContacts.sort(compareByName);
+        actualList.sort(compareByName);
         expectedList.sort(compareByName);
-        Assertions.assertEquals(newContacts, expectedList);
+        Assertions.assertEquals(actualList, expectedList);
     }
 
 }
