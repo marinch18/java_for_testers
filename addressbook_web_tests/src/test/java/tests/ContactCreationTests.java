@@ -1,5 +1,6 @@
 package tests;
 
+import common.CommonFunctions;
 import model.ContactData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -37,17 +38,17 @@ public class ContactCreationTests extends TestBase {
         }
         for (int i = 0; i < 5; i++) {
             result.add(new ContactData()
-                    .withFirstName(randomString(i * 10))
-                    .withMiddleName(randomString(i * 10))
-                    .withLastName(randomString(i * 10))
+                    .withFirstName(CommonFunctions.randomString(i * 10))
+                    .withMiddleName(CommonFunctions.randomString(i * 10))
+                    .withLastName(CommonFunctions.randomString(i * 10))
                     .withPhoto("src/test/resources/images/avatar.png")
-                    .withAddress(randomString(i * 10))
-                    .withHome(randomString(i * 10))
-                    .withMobile(randomString(i * 10))
-                    .withWork(randomString(i * 10))
-                    .withEmail(randomString(i * 10))
-                    .withEmail2(randomString(i * 10))
-                    .withEmail3(randomString(i * 10)));
+                    .withAddress(CommonFunctions.randomString(i * 10))
+                    .withHome(CommonFunctions.randomString(i * 10))
+                    .withMobile(CommonFunctions.randomString(i * 10))
+                    .withWork(CommonFunctions.randomString(i * 10))
+                    .withEmail(CommonFunctions.randomString(i * 10))
+                    .withEmail2(CommonFunctions.randomString(i * 10))
+                    .withEmail3(CommonFunctions.randomString(i * 10)));
         }
         return result;
     }
@@ -88,8 +89,8 @@ public class ContactCreationTests extends TestBase {
     @Test
     void canCreatteContact() {
         var contact = new ContactData()
-                .withFirstName(randomString(10))
-                .withLastName(randomString(10))
+                .withFirstName(CommonFunctions.randomString(10))
+                .withLastName(CommonFunctions.randomString(10))
                 .withPhoto(randomFile("src/test/resources/images"));
         app.contacts().createContact(contact);
     }
