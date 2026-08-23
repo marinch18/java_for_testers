@@ -22,9 +22,11 @@ public class HelperBase {
     }
 
     protected void attach(By locator, String file) {
-        var path = Paths.get(file).toAbsolutePath();
-        System.out.println("PHOTO PATH: " + path);
-        System.out.println("PHOTO EXISTS: " + java.nio.file.Files.exists(path));
-        manager.driver.findElement(locator).sendKeys(Paths.get(file).toAbsolutePath().toString());
+        if (file != null && !file.isEmpty()) {
+            var path = Paths.get(file).toAbsolutePath();
+            System.out.println("PHOTO PATH: " + path);
+            System.out.println("PHOTO EXISTS: " + java.nio.file.Files.exists(path));
+            manager.driver.findElement(locator).sendKeys(Paths.get(file).toAbsolutePath().toString());
+        }
     }
 }
