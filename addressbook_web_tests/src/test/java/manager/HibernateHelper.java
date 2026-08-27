@@ -1,14 +1,13 @@
 package manager;
 
 import manager.hbm.GroupRecord;
+import manager.hbm.ContactRecord;
 import model.GroupData;
+import model.ContactData;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AvailableSettings;
 import org.hibernate.cfg.Configuration;
-import org.jspecify.annotations.NonNull;
 
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +20,7 @@ public class HibernateHelper extends HelperBase {
         sessionFactory = new Configuration()
                 //.addAnnotatedClass(Book.class)
                 .addAnnotatedClass(GroupRecord.class)
+                .addAnnotatedClass(ContactRecord.class)
                 .setProperty(AvailableSettings.URL, "jdbc:mysql://localhost/addressbook")
                 .setProperty(AvailableSettings.USER, "root")
                 .setProperty(AvailableSettings.PASS, "")
@@ -51,6 +51,45 @@ public class HibernateHelper extends HelperBase {
         return convertList(sessionFactory.fromSession(session -> {
             return session.createQuery("from GroupRecord", GroupRecord.class).list();
         }));
+    }
+
+    public List<ContactData> getContactList() {
+        return convertContactList(sessionFactory.fromSession(session -> {
+            return session.createQuery("from ContactRecord", ContactRecord.class).list();
+        }));
+    }
+
+    static List<ContactData> convertContactList(List<ContactRecord> records) {
+        List<ContactData> result = new ArrayList<>();
+
+        for (var record : records) {
+            result.add(convert(record));
+        }
+
+        return result;
+    }
+
+    private static ContactData convert(ContactRecord record) {
+        return new ContactData()
+                .withId("" + record.id)
+                .withFirstName(record.firstname)
+                .withLastName(record.lastname)
+                .withAddress(record.address);
+    }
+
+    private static ContactRecord convert(ContactData data) {
+        var id = data.id();
+
+        if ("".equals(id)) {
+            id = "0";
+        }
+
+        return new ContactRecord(
+                Integer.parseInt(id),
+                data.firstName(),
+                data.lastName(),
+                data.address()
+        );
     }
 
     public long getGroupCount() {

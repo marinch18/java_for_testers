@@ -7,6 +7,7 @@ import jakarta.persistence.Table;
 
 import java.util.Date;
 
+
 @Entity
 @Table(name = "group_list")
 public class GroupRecord {
