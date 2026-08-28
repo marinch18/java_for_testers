@@ -14,7 +14,6 @@ public class ContactRecord {
 
     @Id
     public int id;
-
     public String firstname;
     public String lastname;
     public String address;
