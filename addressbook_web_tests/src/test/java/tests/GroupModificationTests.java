@@ -11,7 +11,7 @@ import java.util.Random;
 public class GroupModificationTests extends TestBase {
 
     @Test
-    void CanModifyGroup() {
+    void canModifyGroup() {
         if (app.hbm().getGroupCount() == 0) {
             app.hbm().createGroup(new GroupData("", "group name", "group header", "group footer"));
         }
