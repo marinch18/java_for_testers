@@ -43,4 +43,20 @@ public class JdbcHelper extends HelperBase {
             throw new RuntimeException(e);
         }
     }
+
+    public void cleanInvalidGroupLinks() {
+        try (var conn = DriverManager.getConnection("jdbc:mysql://localhost/addressbook", "root", "");
+             var statement = conn.createStatement()) {
+
+            statement.executeUpdate(
+                    "DELETE ag " +
+                            "FROM address_in_groups ag " +
+                            "LEFT JOIN addressbook ab ON ab.id = ag.id " +
+                            "WHERE ab.id IS NULL"
+            );
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

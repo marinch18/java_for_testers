@@ -22,8 +22,14 @@ public class TestBase {
             app.init(System.getProperty("browser", "firefox"), properties);
         }
     }
+
     @AfterEach
     void checkDatabaseConsistency() {
         app.jdbc().checkConsistency();
+    }
+
+    @BeforeEach
+    void cleanInvalidLinks() {
+        app.jdbc().cleanInvalidGroupLinks();
     }
 }
