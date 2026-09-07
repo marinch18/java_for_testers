@@ -14,12 +14,17 @@ public record Square(double side) {
         System.out.println(text);
     }
 
-    public double Area() {
-        return this.side * this.side;
+    public static void printPerimeter(Square s) {
+        String text = String.format("Периметр квадрата со стороной %f = %f", s.side, s.Perimeter());
+        System.out.println(text);
     }
 
-    public double perimeter() {
+    public double Perimeter() {
         return 4 * this.side;
+    }
+
+    public double Area() {
+        return this.side * this.side;
     }
 }
 
