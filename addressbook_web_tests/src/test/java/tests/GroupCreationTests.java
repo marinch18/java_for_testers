@@ -49,7 +49,6 @@ public class GroupCreationTests extends TestBase {
                     .withName(CommonFunctions.randomString(10))
                     .withHeader(CommonFunctions.randomString(20))
                     .withFooter(CommonFunctions.randomString(30));
-
         return Stream.generate(randomGroup).limit(3);
     }
 
