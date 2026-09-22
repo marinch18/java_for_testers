@@ -178,5 +178,43 @@ public class ContactHelper extends HelperBase {
         }
         return result;
     }
+
+    public String getEmails(ContactData contact) {
+        return manager.driver.findElement(By.xpath(
+                String.format("//input[@id='%s']/../../td[5]", contact.id())
+        )).getText();
+    }
+
+    public String getAddress(ContactData contact) {
+        return manager.driver.findElement(By.xpath(
+                String.format("//input[@id='%s']/../../td[4]", contact.id())
+        )).getText();
+    }
+
+    public ContactData getContactFromEditForm(ContactData contact) {
+        initContactModification(contact);
+
+        var firstName = manager.driver.findElement(By.name("firstname")).getAttribute("value");
+        var lastName = manager.driver.findElement(By.name("lastname")).getAttribute("value");
+        var address = manager.driver.findElement(By.name("address")).getText();
+        var home = manager.driver.findElement(By.name("home")).getAttribute("value");
+        var mobile = manager.driver.findElement(By.name("mobile")).getAttribute("value");
+        var work = manager.driver.findElement(By.name("work")).getAttribute("value");
+        var email = manager.driver.findElement(By.name("email")).getAttribute("value");
+        var email2 = manager.driver.findElement(By.name("email2")).getAttribute("value");
+        var email3 = manager.driver.findElement(By.name("email3")).getAttribute("value");
+
+        return new ContactData()
+                .withId(contact.id())
+                .withFirstName(firstName)
+                .withLastName(lastName)
+                .withAddress(address)
+                .withHome(home)
+                .withMobile(mobile)
+                .withWork(work)
+                .withEmail(email)
+                .withEmail2(email2)
+                .withEmail3(email3);
+    }
 }
 

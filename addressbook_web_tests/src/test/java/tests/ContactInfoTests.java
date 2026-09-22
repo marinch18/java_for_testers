@@ -1,22 +1,38 @@
 package tests;
-
-import model.ContactData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ContactInfoTests extends TestBase {
+
     @Test
-    void testPhones() {
-        var contacts = app.hbm().getContactList();
-        var expected =  contacts.stream().collect(Collectors.toMap(ContactData::id, contact ->
-            Stream.of(contact.home(), contact.mobile(), contact.work(), contact.phone2())
-                    .filter(s -> s != null && ! "".equals(s))
-                    .collect(Collectors.joining("\n"))
-        ));
-        var phones = app.contacts().getPhones();
-        Assertions.assertEquals(expected, phones);
+    void testContactInfo() {
+        var contact = app.hbm().getContactList().get(0);
+        var phones = app.contacts().getPhones(contact);
+        var address = app.contacts().getAddress(contact);
+        var emails = app.contacts().getEmails(contact);
+
+        var contactFromEditForm = app.contacts().getContactFromEditForm(contact);
+
+        var expectedPhones = Stream.of(
+                        contactFromEditForm.home(),
+                        contactFromEditForm.mobile(),
+                        contactFromEditForm.work()
+                )
+                .filter(s -> s != null && !s.isEmpty())
+                .collect(Collectors.joining("\n"));
+
+        var expectedEmails = Stream.of(
+                        contactFromEditForm.email(),
+                        contactFromEditForm.email2(),
+                        contactFromEditForm.email3()
+                )
+                .filter(s -> s != null && !s.isEmpty())
+                .collect(Collectors.joining("\n"));
+
+        Assertions.assertEquals(expectedPhones, phones);
+        Assertions.assertEquals(contactFromEditForm.address(), address);
+        Assertions.assertEquals(expectedEmails, emails);
         }
 }
