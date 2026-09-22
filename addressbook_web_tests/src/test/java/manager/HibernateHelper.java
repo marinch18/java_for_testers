@@ -8,7 +8,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AvailableSettings;
 import org.hibernate.cfg.Configuration;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -69,7 +68,7 @@ public class HibernateHelper extends HelperBase {
                 .withHome(record.home)
                 .withMobile(record.mobile)
                 .withWork(record.work)
-                .withSecondPhone(record.phone2);
+                .withSecondPhone(record.fax);
     }
 
     private static ContactRecord convert(ContactData data) {
