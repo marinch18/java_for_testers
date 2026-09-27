@@ -12,6 +12,8 @@ import java.util.Properties;
         private String browser;
         private Properties properties;
         private SessionHelper sessionHelper;
+        private HttpSessionHelper httpSessionHelper;
+        private JamesCliHelper JamesCliHelper;
 
         public void init(String browser, Properties properties) {
             this.browser = browser;
@@ -40,6 +42,24 @@ import java.util.Properties;
                 sessionHelper = new SessionHelper(this);
             }
             return sessionHelper;
+        }
+
+        public HttpSessionHelper http() {
+            if (httpSessionHelper == null) {
+                httpSessionHelper = new HttpSessionHelper(this);
+            }
+            return httpSessionHelper;
+        }
+
+        public JamesCliHelper jamesCli() {
+            if (JamesCliHelper == null) {
+                JamesCliHelper = new JamesCliHelper(this);
+            }
+            return JamesCliHelper;
+        }
+
+        public String property(String name) {
+            return properties.getProperty(name);
         }
     }
 
