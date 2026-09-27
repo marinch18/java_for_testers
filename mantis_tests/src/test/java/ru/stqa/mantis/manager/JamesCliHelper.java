@@ -19,6 +19,8 @@ public class JamesCliHelper extends HelperBase {
         cmd.setWorkingDirectory(manager.property("james.workingDir"));
         CircularOutputStream out = new CircularOutputStream();
         cmd.copyOutputTo(out);
+        //System.out.println("WORKING DIR: " + manager.property("james.workingDir"));
+        //System.out.println("COMMAND: " + cmd);
         cmd.execute();
         cmd.waitFor();
         System.out.println(out);

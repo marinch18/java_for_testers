@@ -81,4 +81,11 @@ public class MailHelper extends HelperBase {
         }
     }
 
+    public String extractUrl(MailMessage message) {
+        return Arrays.stream(message.content().split("\\s+"))
+                .filter(s -> s.startsWith("http://"))
+                .findFirst()
+                .orElseThrow();
+    }
+
 }
