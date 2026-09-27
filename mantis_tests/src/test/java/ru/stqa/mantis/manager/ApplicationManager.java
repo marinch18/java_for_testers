@@ -14,6 +14,7 @@ import java.util.Properties;
         private SessionHelper sessionHelper;
         private HttpSessionHelper httpSessionHelper;
         private JamesCliHelper JamesCliHelper;
+        private MailHelper mailHelper;
 
         public void init(String browser, Properties properties) {
             this.browser = browser;
@@ -56,6 +57,13 @@ import java.util.Properties;
                 JamesCliHelper = new JamesCliHelper(this);
             }
             return JamesCliHelper;
+        }
+
+        public MailHelper mail() {
+            if (mailHelper == null) {
+                mailHelper = new MailHelper(this);
+            }
+            return mailHelper;
         }
 
         public String property(String name) {
