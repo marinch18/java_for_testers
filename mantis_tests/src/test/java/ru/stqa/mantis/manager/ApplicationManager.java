@@ -17,6 +17,7 @@ import java.util.Properties;
         private MailHelper mailHelper;
         private MantisHelper mantis;
         private JamesApiHelper JamesApiHelper;
+        private RestApiHelper restApiHelper;
 
         public void init(String browser, Properties properties) {
             this.browser = browser;
@@ -68,12 +69,6 @@ import java.util.Properties;
             return mailHelper;
         }
 
-        public String property(String name) {
-            return properties.getProperty(name);
-        }
-
-
-
         public MantisHelper mantis() {
             if (mantis == null) {
                 mantis = new MantisHelper(this);
@@ -89,6 +84,16 @@ import java.util.Properties;
         }
 
 
+        public RestApiHelper rest() {
+            if (restApiHelper == null) {
+                restApiHelper = new RestApiHelper(this);
+            }
+            return restApiHelper;
+        }
+
+        public String property(String name) {
+            return properties.getProperty(name);
+        }
     }
 
 
