@@ -13,7 +13,7 @@ public class UserRegistrationTests extends TestBase {
         var username = CommonFunctions.randomString(8);
         var email = String.format("%s@localhost", username);
         var password = "password";
-        app.jamesCli().addUser(email, password);
+        app.jamesApi().addUser(email, password);
         app.mantis().startRegistration();
         app.mantis().register(username, email);
         var messages = app.mail().receive(email, password, Duration.ofSeconds(60));
