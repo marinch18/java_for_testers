@@ -14,8 +14,7 @@ public class UserRegistrationTests extends TestBase {
         var email = String.format("%s@localhost", username);
         var password = "password";
         app.jamesApi().addUser(email, password);
-        app.mantis().startRegistration();
-        app.mantis().register(username, email);
+        app.rest().register(username, email);
         var messages = app.mail().receive(email, password, Duration.ofSeconds(60));
         var url = app.mail().extractUrl(messages.get(0));
         //System.out.println("URL: " + url);
